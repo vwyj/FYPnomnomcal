@@ -698,12 +698,12 @@ const getUserCount = async (req, res) => {
 const getLastLoginDateController = async (req, res) => {
     try {
         // Check if req.user is defined and has an _id property
-        if (!req.user || !req.user._id) {
-            return res.status(401).json({
-                success: false,
-                message: 'Unauthorized: User not authenticated or missing user ID',
-            });
-        }
+        // if (!req.user || !req.user._id) {
+        //     return res.status(401).json({
+        //         success: false,
+        //         message: 'Unauthorized: User not authenticated or missing user ID',
+        //    });
+        // }
 
         // Extract the user's ID from the authenticated user's token
         const userId = req.user._id;
