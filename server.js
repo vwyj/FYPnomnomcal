@@ -31,6 +31,12 @@ app.use("/api/v1/dailyStreak", require("./routes/dailyStreakRoutes"));
 app.use("/api/v1/vendorDIY", require("./routes/vendorDIYRoutes"));
 app.use("/api/v1/healthhacks", require("./routes/healthhackRoutes"));
 app.use("/api/v1/bookings", require("./routes/consultationRoutes"));
+app.get("/", (req, res)=>{
+    res.status(200).send({
+        "success": true,
+        "msg": "Node Server Running!"
+    })
+})
 
 // Set-up Server PORT
 // Define the server port: uses the value from the environment variable PORT if available; if not, it defaults to port 5000
